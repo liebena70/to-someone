@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktif Web</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        /* Fallback styles in case the CSS file is not loaded */
+        body {
+            background-color: #ffe6e6; /* Light pink background */
+            color: #ff3366; /* Deep pink text color */
+        }
+        .hidden {
+            display: none; /* Ensure hidden elements are not visible */
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="startPage" class="fade-in">
+        <h1>HALO APAKAH KAU INGIN MELIHAT SESUATU?</h1>
+        <button class="button" onclick="showLoading()">Ya</button>
+        <button class="button" onclick="endPage('Baiklah sampai bertemu lagi')">Tidak</button>
+    </div>
+    
+    <div id="loadingPage" class="hidden">
+        <h2 class="loading">Loading...</h2>
+    </div>
+    
+    <div id="mainPage" class="hidden container">
+        <div class="row fade-in"> 
+            <div class="image-container"> 
+                <img src="pembuka.jpg" alt="Gambar 1" id="image1" class="hidden"> 
+                <button class="button" onclick="showImage('image1', this)">SOMETHING</button>
+            </div> 
+            <p>Hi Eccle, masihkah kau mengingat bagaimana kita bertemu?
+                Kita di pertemukan di kelas mu X-1 dimana kita seolah olah hanya teman satu sekolah
+                Dan kita bertemu di Wenseslaus dan saling bertatap-tatapan dan tanpa di sadari hubungan kita dimulai
+                Aku tak menyangka kita sudah menjadi sejauh ini.
+            </p>
+        </div>
+        <div class="row fade-in"> 
+            <div class="image-container"> 
+                <img src="memikirkan mu suka.jpg" alt="Gambar 2" id="image2" class="hidden">
+                <button class="button" onclick="showImage('image2', this)">SOMETHING</button>
+            </div> 
+            <p>Sejak saat itu aku mulai memikirkan mu, saat itu aku tidak ada rasa padamu
+                Tapi sekarang di pikiranku pasti ada kamu, aku juga bertanya tanya pada waktu itu
+                Apakah engkau menyukaiku? Aku hanya bisa bertanya tanya sambil memikirkanmu
+                Beruntung aku mempunyai seorang teman yang membantu hubungan kita berdua.
+            </p>
+        </div>
+        <div class="row fade-in"> 
+            <div class="image-container"> 
+                <img src="latih diri.jpg" alt="Gambar 3" id="image3" class="hidden">
+                <button class="button" onclick="showImage('image3', this)">SOMETHING</button>
+            </div> 
+            <p>Maka akupun semakin berusaha untuk semakin layak untuk mu.
+                Aku harus berusaha untuk menjadi sosok yang kuat, bijaksana dan terbaik untuk mu
+                Menurut informanku kau sangat menyukai seorang yang jago gitar.
+                Akupun berusaha menjadi seorang yang jago gitar untukmu.
+            </p>
+        </div>
+        <div class="row fade-in"> 
+            <div class="image-container"> 
+                <img src="BANTU kimia.jpg" alt="Gambar 4" id="image4" class="hidden">
+                <button class="button" onclick="showImage('image4', this)">SOMETHING</button>
+            </div> 
+            <p>Aku juga berkembang di akademik, kau masih ingat catatan kimiaku?
+                Ya itu kubuat hanya untuk mu, melalui perantaraku mengantarkannya untukmu
+                Sedikit kesalahan pun langsung kuperbaiki, kekurangan sedikit pun tak ku abaikan
+                Untuk memberikan yang terbaik untukmu hanya untukmu.
+            </p>
+        </div>
+        <div class="row fade-in"> 
+            <div class="image-container"> 
+                <img src="memikirkan mu.jpg" alt="Gambar 5" id="image5" class="hidden">
+                <button class="button" onclick="showImage('image5', this)">SOMETHING</button>
+            </div> 
+            <p>Saat aku tahu kamu sakit, aku hanya bisa lemas sembari bertanya
+                Bagaimana kabarmu? aku lemas, memikirkan mu, dan bertanya
+                Bagaimana caraku untuk menunjukan kepedulianku kepadamu.
+                Jadi teringat juga dimana aku memberikanmu plester dan cokelat.  
+            </p>
+        </div>
+        <div class="row fade-in"> 
+            <div class="image-container"> 
+                <img src="sakit kaki.jpg" alt="Gambar 6" id="image6" class="hidden">
+                <button class="button" onclick="showImage('image6', this)">SOMETHING</button>
+            </div> 
+            <p>Kalau masalah sakit aku juga teringat di saat kakiku terkilir
+                Ya belum lama sih, tapi ini mengingatkan ku pada nasihatmu 
+                supaya aku lebih jaga diri. Maaf kalo aku masih bandel ga tau jaga diri
+                Haaaahhh such a memory maaf kalo belum bisa menjadi yang engkau inginkan
+                Aku akan berusaha menjadi yang terbaik untukmu.
+            </p>
+        </div>
+        <h2>APAKAH KAMU BERSENANG-SENANG?</h2>
+        <button class="button" onclick="endPage('SAMPAI BERTEMU LAGI')">Ya</button>
+        <button class="button" onclick="endPage('BAIKLAH AKU AKAN MENGIRIMKAN LEBIH LAGI NANTI!')">Tidak</button>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("Page loaded successfully"); // Debugging log
+            // Ensure startPage is visible and no elements are hidden automatically
+            document.getElementById("startPage").classList.remove("hidden");
+        });
+    </script>
+    <script src="script1.js"></script>
+</body>
+</html>
